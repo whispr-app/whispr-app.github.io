@@ -1,0 +1,91 @@
+<script lang="ts">
+	import Header from '../components/Header.svelte';
+	import GradientText from '../components/GradientText.svelte';
+	import Message from '../components/Message.svelte';
+	import EncryptedText from '../components/EncryptedText.svelte';
+	import Button from '../components/Button.svelte';
+	import WhisprLogoWhite from '../components/whispr-logo-white.svelte';
+	import Footer from '../components/Footer.svelte';
+</script>
+
+<Header />
+<section>
+	<h1>Privacy that just <GradientText>makes sense.</GradientText></h1>
+	<h2>Scroll down to find out more.</h2>
+</section>
+<section>
+	<div
+		style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 20px;"
+	>
+		<div style="display: flex; flex-direction: column; width: 400px;">
+			<Message sentByMe={false} groupMessage={false}
+				><div style="margin: 10px;"><EncryptedText length={30} /></div></Message
+			>
+			<Message sentByMe={true} groupMessage={false}
+				><div style="margin: 10px;"><EncryptedText length={20} /></div></Message
+			>
+		</div>
+		<div>
+			<h1>Say <GradientText>what you want</GradientText></h1>
+			<h2>with end-to-end encrypted messages.</h2>
+		</div>
+	</div>
+</section>
+<section>
+	<div
+		style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 70px;"
+	>
+		<div>
+			<h1>Keep your identity <GradientText>private.</GradientText></h1>
+			<h2>
+				<span style="font-variation-settings: 'wdth' 125, 'wght' 200">Whispr</span> is 100%
+				anonymous
+				<br /> and decentralised to protect your privacy.
+			</h2>
+		</div>
+		<div>
+			<img src="/profile.svg" alt="profile" width="200px" style="filter: blur(10px);" />
+		</div>
+	</div>
+</section>
+<section>
+	<div
+		style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 70px;"
+	>
+		<div>
+			<h1 style="font-size: 200px; padding: 0; margin: 0;">🌍</h1>
+		</div>
+		<div>
+			<h1>Costs <GradientText>nothing.</GradientText></h1>
+			<h2>
+				<span style="font-variation-settings: 'wdth' 125, 'wght' 200">Whispr</span> relies on
+				donations to keep operating.<br /> If you're an advocate for privacy, donate today!
+			</h2>
+			<div style="display: flex; justify-content: center;">
+				<div style="width: 100px;">
+					<Button>Donate</Button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<Footer />
+
+<style lang="scss">
+	@use '../styles/colours.scss' as colours;
+	@use '../styles/textSize.scss' as textSize;
+
+	h1 {
+		font-size: textSize.$largest;
+	}
+
+	section {
+		border-top: 1px solid colours.$outline-100;
+		border-bottom: solid 1px colours.$outline-100;
+		padding: 2rem;
+		padding-top: 14rem;
+		padding-bottom: 14rem;
+		box-sizing: border-box;
+		width: 100%;
+	}
+</style>
