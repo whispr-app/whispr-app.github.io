@@ -32,9 +32,21 @@
 	}
 
 	footer {
+		padding: 10px;
 		height: 12rem;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
+
+		div > * {
+			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: 830px) {
+		footer {
+			flex-direction: column;
+			height: auto;
+		}
 	}
 </style>

@@ -14,12 +14,10 @@
 	<h2>Scroll down to find out more.</h2>
 </section>
 <section>
-	<div
-		style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 20px;"
-	>
-		<div style="display: flex; flex-direction: column; width: 400px;">
+	<div style="gap: 20px;">
+		<div class="encrypted-messages" style="display: flex; flex-direction: column;">
 			<Message sentByMe={false} groupMessage={false}
-				><div style="margin: 10px;"><EncryptedText length={30} /></div></Message
+				><div style="margin: 10px;"><EncryptedText length={20} /></div></Message
 			>
 			<Message sentByMe={true} groupMessage={false}
 				><div style="margin: 10px;"><EncryptedText length={20} /></div></Message
@@ -32,9 +30,7 @@
 	</div>
 </section>
 <section>
-	<div
-		style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 70px;"
-	>
+	<div style="gap: 70px;">
 		<div>
 			<h1>Keep your identity <GradientText>private.</GradientText></h1>
 			<h2>
@@ -49,9 +45,7 @@
 	</div>
 </section>
 <section>
-	<div
-		style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 70px;"
-	>
+	<div style="gap: 70px;">
 		<div>
 			<h1 style="font-size: 200px; padding: 0; margin: 0;">🌍</h1>
 		</div>
@@ -87,5 +81,31 @@
 		padding-bottom: 14rem;
 		box-sizing: border-box;
 		width: 100%;
+
+		> div {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.encrypted-messages {
+		width: 400px;
+	}
+
+	@media screen and (max-width: 830px) {
+		section {
+			// padding-top: 8rem;
+			// padding-bottom: 8rem;
+
+			> div {
+				flex-direction: column;
+			}
+		}
+
+		.encrypted-messages {
+			width: 90%;
+		}
 	}
 </style>
