@@ -12,7 +12,7 @@
 	<div>
 		<h3>Product</h3>
 		<p>Download</p>
-		<p>Open source</p>
+		<a href="https://github.com/whispr-app/" target="_blank">GitHub</a>
 	</div>
 	<div>
 		<h3>Information</h3>
@@ -40,6 +40,7 @@
 
 		div > * {
 			text-align: center;
+			display: block;
 		}
 	}
 
