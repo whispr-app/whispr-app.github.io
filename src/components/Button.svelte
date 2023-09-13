@@ -13,7 +13,7 @@
 
 		background-color: colours.$button-100;
 		color: colours.$text-100;
-		border-radius: 15px;
+		border-radius: 13px;
 		border: 1px solid colours.$outline-100;
 
 		transition: border 0.2s ease-in-out;
